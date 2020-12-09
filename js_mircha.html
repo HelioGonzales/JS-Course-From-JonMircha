@@ -69,7 +69,7 @@
         } while(contador < 10) */
 
 
-        for (let i = 0; i < 10; i++) {
+        /* for (let i = 0; i < 10; i++) {
             console.log("for " + i);
             
         }
@@ -82,8 +82,53 @@
 
         for (const propiedad in helio) {
             console.log(`Key: ${propiedad}, Value: ${helio[propiedad]}`)
+        } */
+
+        // Funcion constructora - objectos
+        function Animal(nombre, genero) {
+            this.nombre = nombre;
+            this.genero = genero;
         }
 
+        Animal.prototype.sonar = function() {
+            console.log(`Hago sonidos porque estoy vivo`);
+        }
+
+        Animal.prototype.saludar = function() {
+            console.log(`Hola me llamo ${this.nombre}`);
+        }
+
+        //Herencia prototipica
+        function Perro(nombre, genero, tamanio) {
+            this.super = Animal;
+            this.super(nombre, genero);
+            this.tamanio = tamanio;
+        }
+
+        //Perro hereda de Animal
+        Perro.prototype = new Animal();
+        Perro.prototype.constructor = Perro;
+
+        //Sobre escritura del metodo de los  padres
+        Perro.prototype.sonar = function() {
+            console.log("Mi sonido es un ladrido");
+        }
+
+        Perro.prototype.ladrar = function() {
+            console.log("Guaauuuuu!!!");
+        }
+
+        const snoopy = new Perro("Snoopy", "Macho", "Mediano"),
+            lolaBunny = new Animal("Lola Bunny", "hembra");
+
+        console.log(snoopy);
+        console.log(lolaBunny);
+
+        snoopy.saludar();
+        snoopy.sonar();
+        snoopy.ladrar();
+        lolaBunny.saludar();
+        lolaBunny.sonar();
     </script>
 </body>
 </html>
