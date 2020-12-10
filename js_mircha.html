@@ -281,16 +281,48 @@ console.log(aviso); */
 
 // Expresiones regulares ++++++++++++++++++++++++++++++++
 
-let cadena = "Lorem ipsum, lorem. 365"
+/* let cadena = "Lorem ipsum, lorem. 365"
 
-/* let expReg = new RegExp("lorem","ig");
+let expReg = new RegExp("lorem","ig");
 console.log(expReg.test(cadena));
-console.log(expReg.exec(cadena)); */
+console.log(expReg.exec(cadena)); 
 
 // se usa mas este formato 
 let expReg2 = /lorem{1,}/ig; 
 console.log(expReg2.test(cadena));
-console.log(expReg2.exec(cadena));
+console.log(expReg2.exec(cadena)); */
+
+// FUNCIONES ANONIMAS AUTOEJECUTABLES +++++++++++++++++++
+
+(function () {
+    console.log("Mi primer IIFE");
+})(); 
+
+(function (d, w, c) {
+    console.log("Mi segunda IIFE");
+    console.log(d);
+    console.log(w);
+    c.log("Este es un console.log")
+})(document, window, console); 
+
+
+(function () {
+    console.log('version Clasica')
+})();
+
+((function () {
+    console.log('version Crockford')
+})());
+
++function () {
+    console.log('version unaria')
+}();
+
+!function () {
+    console.log('version Facebook')
+}();
+
+
 
     </script>
 </body>
