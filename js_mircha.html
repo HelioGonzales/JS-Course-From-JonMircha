@@ -265,7 +265,7 @@ console.log(undefined && "Valor de la derecha"); */
 
 // Alert, confirm y prompt ++++++++++++++++++++++++++++++
 
-console.log(window);
+/* console.log(window);
 //alert("Hola esto es una alerta");
 //confirm("Hola esto es una confirmacion");
 //prompt("Hola esto es un prompt y le permite al usuario  ingresar un valor");
@@ -276,7 +276,21 @@ aviso = prompt("Hola esto es un prompt y le permite al usuario  ingresar un valo
 
 console.log(alerta);
 console.log(confirmacion);
-console.log(aviso);
+console.log(aviso); */
+
+
+// Expresiones regulares ++++++++++++++++++++++++++++++++
+
+let cadena = "Lorem ipsum, lorem. 365"
+
+/* let expReg = new RegExp("lorem","ig");
+console.log(expReg.test(cadena));
+console.log(expReg.exec(cadena)); */
+
+// se usa mas este formato 
+let expReg2 = /lorem{1,}/ig; 
+console.log(expReg2.test(cadena));
+console.log(expReg2.exec(cadena));
 
     </script>
 </body>
