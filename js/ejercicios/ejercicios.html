@@ -101,28 +101,75 @@ repetirTexto("Hola mundo"); */
 
 
 //5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
-const invertirPalabras = (texto = "") => 
-(!texto) 
-? console.warn("No es texto")
-: console.log();
+const invertirCadena = (cadena = "") => 
+(!cadena)
+? console.warn("No ingresaste una cadena de texto")
+: console.info(cadena.split("").reverse().join(""));
+
+invertirCadena();
+invertirCadena("Hola mundo");
+invertirCadena("JavaSript es un lenguaje de programacion increible");
 
 
 
 
 //6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
-const palabrasRepetidas = (texto = "", /ketamina/g) => 
-(!texto) 
-? console.warn("No es texto");
-: console.info(`la cadena ${palabrasRepetidas} tiene `);
+const textoEnCadena = (cadena ="", texto ="") => {
+    if(!cadena) return console.warn("No ingresaste el texto largo");
+    if(!texto) return console.warn("No ingresaste la palabra a evaluar");
 
-palabrasRepetidas(("La ketamina es una droga disociativa con potencial alucinógeno, derivada de la fenciclidina, utilizada original y actualmente en medicina por sus propiedades sedantes, analgésicas y sobre todo, anestésicas. La ketamina fue sintetizada en 1962 por Calvin Stevens y usada por primera vez en la práctica clínica en 1965 por Corsen y Domino. La ketamina es utilizada en humanos y también en medicina veterinaria. Farmacológicamente, se clasifica como un antagonista del receptor NMDA. A dosis anestésicas altas, se une también al Receptor opioide2​ mu de tipo 2 en cultivos celulares de neuroblastomas humanos, pero sin actividad agonista,3​ y a receptores opioides sigma en ratas.4​ También interactúa con receptores muscarínicos, cascadas algésicas descendientes monoaminérgicas y canales de calcio5​ voltaje dependientes. La ketamina tiene un amplio rango de efectos en humanos, incluyendo sedación, analgesia y anestesia. Dentro de sus principales efectos secundarios se encuentran las alucinaciones, elevación de la presión sanguínea y aumento de las secreciones en las vías respiratorias. Además produce broncodilatación.6​ Se utiliza principalmente para la inducción y mantenimiento de la anestesia general, usualmente en combinación con un sedante. Otros usos incluyen sedación en terapia intensiva, analgesia (particularmente en medicina de emergencia), y tratamiento del broncoespasmo. Se demostró su efectividad en el tratamiento de pacientes con trastorno bipolar que no respondieron a otros antidepresivos.7​ En personas con depresión mayor produce un efecto antidepresivo rápido, actuando en alrededor de dos horas, en contraposición con los antidepresivos típicos, que requieren varias semanas.8​ Esto lo vuelve un objetivo terapéutico viable para el desarrollo de antidepresivos de acción rápida.9​ Es un anestésico muy utilizado en la medicina veterinaria. La ketamina es un compuesto quiral. La mayor parte de las preparaciones de ketamina son racematos. El enantiómero más activo, (S)-ketamina, está disponible para uso médico. Tanto el enantiómero (R)-ketamina, el (S)-ketamina y el racemato (R,S)-ketamina tienen efectos farmacológicos muy distintos, siendo el (S)-ketamina el más potente."););    
+    let i = 0,
+     contador = 0;
+
+    while (i !== -1) {
+        i = cadena.indexOf(texto, i);
+        if(i!== -1) {
+            i++;
+            contador++;
+        }
+    }
+    return console.info(`La palabra ${texto} se repite ${contador} veces`);
+}
+
+textoEnCadena();
+textoEnCadena("", "mundo");
+textoEnCadena("Hola mundo adios mundo");
+textoEnCadena("Hola mundo adios mundo", "mundo");
 
 
 
 
 
-7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
-8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+
+// 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+const palindromo  = (palabra ="") => {
+    if(!palabra) return console.warn("No ingresaste una palabra o frase");
+
+    palabra = palabra.toLowerCase();
+    let alReves = palabra.split("").reverse().join("");
+
+    return(palabra === alReves)
+     ?console.info(`Si es palindromo. Palabra original ${palabra}, Palabra al reves ${alReves}`)
+     : console.info(`No es palindromo. Palabra original ${palabra}, Palabra al reves ${alReves}`);
+}
+
+palindromo();
+palindromo("Hola mundo");
+palindromo("Salas");
+
+
+
+//8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+const eliminarCaracteres = (texto ="", patron = "") =>
+(!texto)
+ ? console.warn("No ingresaste un texto")
+ : (!patron)
+  ? console.warn("No ingresaste un patron de caracteres")
+  : console.info(texto.replace(new RegExp(patron, "ig"), ""));
+
+  eliminarCaracteres();
+  eliminarCaracteres("xyz1, xyz2, xyz3, xyz4 y xyz");
+  eliminarCaracteres("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz");
 
 
 
