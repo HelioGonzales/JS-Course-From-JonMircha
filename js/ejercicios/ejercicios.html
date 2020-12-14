@@ -101,20 +101,20 @@ repetirTexto("Hola mundo"); */
 
 
 //5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
-const invertirCadena = (cadena = "") => 
+/* const invertirCadena = (cadena = "") => 
 (!cadena)
 ? console.warn("No ingresaste una cadena de texto")
 : console.info(cadena.split("").reverse().join(""));
 
 invertirCadena();
 invertirCadena("Hola mundo");
-invertirCadena("JavaSript es un lenguaje de programacion increible");
+invertirCadena("JavaSript es un lenguaje de programacion increible"); */
 
 
 
 
 //6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
-const textoEnCadena = (cadena ="", texto ="") => {
+/* const textoEnCadena = (cadena ="", texto ="") => {
     if(!cadena) return console.warn("No ingresaste el texto largo");
     if(!texto) return console.warn("No ingresaste la palabra a evaluar");
 
@@ -134,7 +134,7 @@ const textoEnCadena = (cadena ="", texto ="") => {
 textoEnCadena();
 textoEnCadena("", "mundo");
 textoEnCadena("Hola mundo adios mundo");
-textoEnCadena("Hola mundo adios mundo", "mundo");
+textoEnCadena("Hola mundo adios mundo", "mundo"); */
 
 
 
@@ -142,7 +142,7 @@ textoEnCadena("Hola mundo adios mundo", "mundo");
 
 
 // 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
-const palindromo  = (palabra ="") => {
+/* const palindromo  = (palabra ="") => {
     if(!palabra) return console.warn("No ingresaste una palabra o frase");
 
     palabra = palabra.toLowerCase();
@@ -155,12 +155,12 @@ const palindromo  = (palabra ="") => {
 
 palindromo();
 palindromo("Hola mundo");
-palindromo("Salas");
+palindromo("Salas"); */
 
 
 
 //8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
-const eliminarCaracteres = (texto ="", patron = "") =>
+/* const eliminarCaracteres = (texto ="", patron = "") =>
 (!texto)
  ? console.warn("No ingresaste un texto")
  : (!patron)
@@ -169,10 +169,256 @@ const eliminarCaracteres = (texto ="", patron = "") =>
 
   eliminarCaracteres();
   eliminarCaracteres("xyz1, xyz2, xyz3, xyz4 y xyz");
-  eliminarCaracteres("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz");
+  eliminarCaracteres("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz"); */
 
 
 
+
+
+// 9) Programa una función que obtenga un numero aleatorio entre 501 y 600.
+/* const aleatorio = () => console.info(Math.round((Math.random() * 100) + 500));
+
+aleatorio(); */
+
+
+
+
+// 10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.
+/* const capicua = (numero = 0) => {
+    if(!numero) return console.warn("No ingresaste un numero");
+    if(typeof numero !== "number") return console.error(`El valor ${numero} ingresado, no es un numero`);
+
+    numero  = numero.toString();
+    let alReves = numero.split("").reverse().join("");
+
+    return (numero === alReves)
+     ? console.info(`Si es capicua. Numero original ${numero}. Numero al reves ${alReves}`)
+     : console.info(`No es capicua. Numero original ${numero}. Numero al reves ${alReves}`)  
+
+}
+capicua();
+capicua("19");
+capicua({});
+capicua(2002);
+capicua(2000); */
+
+
+
+// 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.
+/* const factorial = (numero = undefined) => {
+    if(numero === undefined) return console.warn("No ingresaste un numero");
+
+    if(typeof numero !== "number") return console.error(`El valor ${numero} ingresado, no es un numero`);
+
+    if(numero === 0) return console.error("El numero no puede ser 0");
+
+    if(Math.sign(numero) === -1) return console.error("El numero  no puede ser negativo");
+
+    let factorial = 1;
+
+    for(let i = numero; i > 1; i--){
+        factorial *= i;
+    }
+
+    return console.info(`El factorial de ${numero} es ${factorial}`);
+
+}
+
+factorial();
+factorial("5");
+factorial([1, 2, 3]);
+factorial(0);
+factorial(-5);
+factorial(5);
+factorial(8);
+ */
+
+
+
+//12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
+/* const numeroPrimo = (numero = undefined) => {
+    if(numero === undefined) return console.warn("No ingresaste un numero");
+
+    if(typeof numero !== "number") return console.error(`El valor ${numero} ingresado, no es un numero`);
+    
+    if(numero === 0) return console.error("El numero no puede ser 0");
+
+    if(numero === 1) return console.error("El numero no puede ser 1");
+
+    if(Math.sign(numero) === -1) return console.error("El numero  no puede ser negativo");
+
+    let divisible = false;
+
+    for(let i = 2; i < numero; i++) {
+        if ((numero % i === 0)) {
+            divisible = true;
+            break;
+        }
+    }
+
+    return (divisible)
+     ? console.log(`El numero ${numero}, no es primo`)
+     : console.log(`El numero ${numero}, si es primo`)
+}
+
+numeroPrimo();
+numeroPrimo("320");
+numeroPrimo(true);
+numeroPrimo(0);
+numeroPrimo(1);
+numeroPrimo(-13);
+numeroPrimo(13);
+numeroPrimo(200); */
+
+
+
+
+
+
+//13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
+/* const numeroParImpar = (numero = undefined) => {
+    if(numero === undefined) return console.warn("No ingresaste un numero");
+    
+    if(typeof numero !== "number") return console.error(`El valor ${numero} ingresado, no es un numero`);
+
+    return ((numero % 2) === 0)
+     ? console.info(`El numero ${numero} es par`)
+     : console.info(`El numero  ${numero} es impar`);
+}
+
+numeroParImpar();
+numeroParImpar("23");
+numeroParImpar(-398);
+numeroParImpar(19); */
+
+
+
+
+//14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
+/* const convertirGrados = (grados = undefined, unidad = undefined) => {
+    if (grados === undefined) return console.warn("No ingresaste grados a convertir");
+
+    if (typeof grados !== "number") return console.error(`El valor ${grados} ingresado, no es un numero`);
+
+    if (unidad === undefined) return console.warn("No ingresaste grados a convertir");
+
+    if (typeof unidad !== "string") return console.error(`El valor ${unidad} ingresado, no es una cadena de texto`);
+
+    if (unidad.length !== 1 || !/(C|F)/.test(unidad)) return console.warn("Valor de unidad no reconocido");
+
+    
+    if(unidad === "C") {
+        return console.info(`${grados}°C = ${Math.round((grados * (9/5)) + 32)}°F`);
+    } else if(unidad === "F") {
+        return console.info(`${grados}°F = ${Math.round(((grados -32) * (5/9)))}°C`);  
+    } else {
+        return console.error("El tipo de grados a convertir no es valido");
+    }
+    console.info("Dice que  funciono");
+
+}
+
+
+convertirGrados();
+convertirGrados("2");
+convertirGrados(2);
+convertirGrados(2, true);
+convertirGrados(2, "Hola");
+convertirGrados(2,"E");
+convertirGrados(100,"C");
+convertirGrados(100,"F"); */
+
+
+// 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10. 
+/* const convertirBinarioDecimal = (numero = undefined, base = undefined) => {
+    if (numero === undefined) return console.warn("No ingresaste el numero a convertir");
+
+    if (typeof numero !== "number") return console.error(`El valor ${numero} ingresado, no es un numero`);
+
+    if (base === undefined) return console.warn("No  ingresaste la base a convertir");
+
+    if (typeof base !== "number") return console.error(`El valor ${base} ingresado, no es un numero`);
+
+    if (base === 2) {
+        return console.info(`${numero} base ${base} = ${parseInt(numero,base)} base 10`);
+    } else if (base === 10) {
+        return console.info(`${numero} base ${base} = ${(numero.toString())} basse 2`);
+    } else {
+        return console.error("El tipo de base a convertir no es valido");
+    }
+}
+
+convertirBinarioDecimal();
+convertirBinarioDecimal("2");
+convertirBinarioDecimal(100);
+convertirBinarioDecimal(100, "2");
+convertirBinarioDecimal(100, 2); */
+
+
+
+
+
+// 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
+/* const aplicarDescuento = (monto = undefined, descuento = 0) => {
+    if (monto === undefined) return console.warn("No ingresaste el monto");
+
+    if (typeof monto !== "number") return console.error(`El valor ${monto} ingresado, no es un numero`);
+
+    if (monto === 0) return console.error("El monto no puede ser 0");
+
+    if (Math.sign(monto) === -1) return console.error("El monto no puede ser negativo");
+
+    if (typeof descuento !== "number") return console.error(`El valor ${descuento} ingresado, no es un numero`);
+
+    if (Math.sign(descuento) === -1) return console.error("El monto no puede ser negativo");
+
+    return console.info(`$${monto} - ${descuento}% = $${monto - ((monto*descuento)/100)}`);
+}
+
+aplicarDescuento();
+aplicarDescuento("200");
+aplicarDescuento(0);
+aplicarDescuento(-1000);
+aplicarDescuento(1000, "20");
+aplicarDescuento(1000, -20);
+aplicarDescuento(1000);
+aplicarDescuento(1000, 25); */
+
+
+
+
+
+
+
+// 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
+/* const calcularAnios = (fecha = undefined) => {
+    if (fecha === undefined) return console.warn("No ingresaste la fecha");
+
+    if (!(fecha instanceof Date)) return console.error("El valor que ingresaste no es una fecha valida");
+
+    let hoyMenosFecha = new Date().getTime() - fecha.getTime(),
+    aniosEnMS = 1000 * 60 * 60 * 24 * 365,
+    aniosHumanos = Math.floor(hoyMenosFecha / aniosEnMS);
+
+    return (Math.sign(aniosHumanos) === -1)
+     ? console.info(`faltan ${Math.abs(aniosHumanos)} anios para el ${fecha.getFullYear()}`)
+     :(Math.sign(aniosHumanos) === 1)
+      ? console.info(`Han pasado ${aniosHumanos} años, desde ${fecha.getFullYear()}`)
+      : console.info(`Estamos en el año actual ${fecha.getFullYear()}`)
+}
+
+calcularAnios();
+calcularAnios({});
+calcularAnios(false);
+calcularAnios(new Date());
+calcularAnios(new Date(1988,0,2));
+calcularAnios(new Date(1784,0,2));
+calcularAnios(new Date(2400,0,2)); */
+
+
+// 18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
+// 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
+// 20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
 
     </script>
 </body>
