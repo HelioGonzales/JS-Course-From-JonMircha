@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercises</title>
+</head>
+<body>
+    <h1>My Excercises</h1>
+    <script>
+        // ARRAY - SUM 
+        //1. Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.
+        function sum(arr) {
+            if(arr === undefined) return console.error(0);
+
+            let s = 0;
+            for (let i = 0; i < arr.length; i++){
+            s = s + arr[i];
+            }
+            console.log(`${arr} ${s}`);
+        }
+
+        sum([1,5.2,4,0,-1]);
+        sum([]);
+    </script>
+</body>
+</html>
