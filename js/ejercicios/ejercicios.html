@@ -391,7 +391,7 @@ aplicarDescuento(1000, 25); */
 
 
 // 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
-/* const calcularAnios = (fecha = undefined) => {
+const calcularAnios = (fecha = undefined) => {
     if (fecha === undefined) return console.warn("No ingresaste la fecha");
 
     if (!(fecha instanceof Date)) return console.error("El valor que ingresaste no es una fecha valida");
@@ -407,7 +407,7 @@ aplicarDescuento(1000, 25); */
       : console.info(`Estamos en el año actual ${fecha.getFullYear()}`)
 }
 
-calcularAnios();
+/* calcularAnios();
 calcularAnios({});
 calcularAnios(false);
 calcularAnios(new Date());

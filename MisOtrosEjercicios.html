@@ -19,9 +19,26 @@
             }
             console.log(`${arr} ${s}`);
         }
+        /* sum([1,5.2,4,0,-1]);
+        sum([]); */
 
-        sum([1,5.2,4,0,-1]);
-        sum([]);
+        // TIME 2 Clock shows 'h' hours, 'm' minutes and 's' seconds after midnight. Your task is to make 'Past' function which returns time converted to milliseconds.
+
+        const past = (h = undefined, m = undefined, s = undefined) => {
+           
+            let horaASeg = h * 60 * 60,
+                minASeg = m * 60,
+                timeAMil = (horaASeg + minASeg + s) * 1000;             
+
+                return console.info(timeAMil);
+        }     
+                 
+
+        
+
+        past(0,1,1);
+        past(1,1,1);
+
     </script>
 </body>
 </html>
