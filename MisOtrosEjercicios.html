@@ -22,22 +22,58 @@
         /* sum([1,5.2,4,0,-1]);
         sum([]); */
 
-        // TIME 2 Clock shows 'h' hours, 'm' minutes and 's' seconds after midnight. Your task is to make 'Past' function which returns time converted to milliseconds.
+        // TIME 
+        // 2 Clock shows 'h' hours, 'm' minutes and 's' seconds after midnight. Your task is to make 'Past' function which returns time converted to milliseconds.
 
-        const past = (h = undefined, m = undefined, s = undefined) => {
+/*         const past = (h, m, s) => {
+            if(h === undefined) return console.error("error");
+
+            if(typeof h !== "number") return console.error("error");
+
+            if(!(h < 24)) return console.error("error");
+
+            if (Math.sign(h) === -1) return console.error("error");
+
+            if(m === undefined) return console.error("error");
+
+            if(typeof m !== "number") return console.error("error");
+
+            if(!(m < 60)) return console.error("error");
+
+            if (Math.sign(m) === -1) return console.error("error");
+
+            if(s === undefined) return console.error("error");
+
+            if(typeof s !== "number") return console.error("error");
+
+            if(!(s < 60)) return console.error("error");   
+
+            if (Math.sign(s) === -1) return console.error("error");
            
             let horaASeg = h * 60 * 60,
                 minASeg = m * 60,
                 timeAMil = (horaASeg + minASeg + s) * 1000;             
 
-                return console.info(timeAMil);
+                return console(timeAMil);
         }     
                  
 
-        
-
         past(0,1,1);
         past(1,1,1);
+        past(0,0,0);
+        past(1,0,1);
+        past(1,0,0);
+        past();
+        past("2");
+        past(25, 64, 70);
+        past(45, 30, 30);
+        past(-12, -30, -30); */
+
+        // Solucion facil
+        /* function past(h, m, s){
+        //#Happy Coding! ^_^
+        return((h*60*60+m*60+s)*1000);
+        } */
 
     </script>
 </body>
