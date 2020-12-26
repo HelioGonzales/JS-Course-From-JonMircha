@@ -118,16 +118,30 @@
 
             quarterOf(6); */
 
-            // 4 
+            // 4. Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.
 
-            function invert(array) {  
-            if (math.sing == -1) {
-            return array * -1;
-            } else {
-            return array;
-    
-  }
-}
+            
+            /* function sum (numbers){
+                if (numbers.length === 0) return console.log(0);
+
+                const reducer = (accumulator, currentValue) => accumulator + currentValue;          
+                return console.log(numbers.reduce(reducer));
+
+            }
+
+            sum([1, 5.2, 4, 0, -1]);
+            sum([]); */
+
+
+            // 5. Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+
+            function invert(array) {
+             return console.log(array.map((n) => n > 0 ? -n : Math.abs(n)));
+                
+             
+            }
+
+            invert([1, 2, 3 , 4, 5, 6]);
 
     </script>
 </body>
