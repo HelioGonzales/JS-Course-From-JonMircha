@@ -191,7 +191,7 @@ console.log($cards.children[3].closest("section")); */
 
 
 
-const $figure = document.createElement("figure"),
+/* const $figure = document.createElement("figure"),
  $img = document.createElement("img"),
  $figcaption = document.createElement("figcaption"),
  $figcaptionText = document.createTextNode("Animals"),
@@ -266,4 +266,93 @@ $figure.appendChild($figcaption);
 
     document.write("<h3>Meses del año</h3>");
     $ul3.appendChild($fragment);
-    document.body.appendChild($ul3);
+    document.body.appendChild($ul3); */
+
+
+
+
+
+    /* const $cards = document.querySelector(".cards"),
+     $template = document.getElementById("template-card").content,
+     $fragment = document.createDocumentFragment(),
+     cardContent = [
+       {
+         title: "Tecnologia",
+         img: "http://placeimg.com/200/200/tech",
+       },
+       {
+        title: "Animales",
+        img: "http://placeimg.com/200/200/animals",
+       },
+       {
+        title: "Arquitectura",
+        img: "http://placeimg.com/200/200/arch",
+       },
+       {
+        title: "Gente",
+        img: "http://placeimg.com/200/200/people",
+       },
+       {
+        title: "Naturaleza",
+        img: "http://placeimg.com/200/200/nature",
+       }
+     ];
+
+     cardContent.forEach(el => {
+      $template.querySelector("img").setAttribute("src", el.img);
+      $template.querySelector("img").setAttribute("alt", el.title);
+      $template.querySelector("figcaption").textContent = el.title;
+
+
+      let $clone = document.importNode($template, true);
+      $fragment.appendChild($clone);
+     });
+
+     $cards.appendChild($fragment); */
+
+
+
+
+
+
+
+     /* const $cards = document.querySelector(".cards"),
+      $newCard = document.createElement("figure"),
+      $cloneCards = $cards.cloneNode(true);
+
+    $newCard.innerHTML = `
+      <img src="http://placeimg.com/200/200/any" alt="Any">
+      <figcaption>Any</figcaption>
+    `;
+
+    $newCard.classList.add("card");
+
+    //$cards.replaceChild($newCard, $cards.children[2]);
+    //$cards.removeChild($cards.lastElementChild);
+     //$cards.insertBefore($newCard, $cards.firstElementChild);
+     document.body.appendChild($cloneCards); */
+
+
+
+
+
+
+     /* const $cards = document.querySelector(".cards"),
+     $newCard = document.createElement("figure");
+
+   let $contentCard = `
+     <img src="http://placeimg.com/200/200/any" alt="Any">
+     <figcaption></figcaption>
+   `;
+
+   $newCard.classList.add("card");
+
+   $newCard.insertAdjacentHTML("beforeend", $contentCard);
+   $newCard.querySelector("figcaption").insertAdjacentText("afterbegin", "Any");
+   $cards.insertAdjacentElement("afterbegin", $newCard);
+
+   
+  //$cards.prepend($newCard);
+  //$cards.append($newCard);
+  //$cards.before($newCard);
+  //$cards.after($newCard); */
