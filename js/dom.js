@@ -361,15 +361,19 @@ $figure.appendChild($figcaption);
 
 
 
-  function holaMundo() {
+  /* function holaMundo() {
     alert("Hola Mundo");
     console.log(event);
   }
 
-
+  function saludar(nombre = "Desconocid@") {
+    alert(`Hola ${nombre}`);
+    console.log(event);
+  }
 
   const $eventoSemantico = document.getElementById("evento-semantico"),
-  $eventoMultiple = document.getElementById("evento-multiple");
+  $eventoMultiple = document.getElementById("evento-multiple"),
+  $eventoRemover = document.getElementById("evento-remover");
 
   $eventoSemantico.onclick = holaMundo;
   $eventoSemantico.onclick = function (e) {
@@ -385,4 +389,50 @@ $figure.appendChild($figcaption);
     console.log(e.type);
     console.log(e.target);
     console.log(event);
-  })
+  });
+
+  $eventoMultiple.addEventListener("click", () => {
+    saludar();
+    saludar("Helio");
+  });
+
+const removerDobleClick = (e) => {
+  alert(`Removiendo el evento de tipo ${e.type}`);
+  console.log(e);
+  $eventoRemover.removeEventListener("dblclick", removerDobleClick);
+  $eventoRemover.disabled = true;
+}
+
+  $eventoRemover.addEventListener("dblclick", removerDobleClick); */
+
+
+
+
+
+const $divsEventos = document.querySelectorAll(".eventos-flujos div"),
+ $linkEventos = document.querySelector(".eventos-flujos a");
+
+function flujoEventos(e) {
+  console.log(`Hola te saluda ${this.className}, el click lo origino ${e.target.className}`);
+  e.stopPropagation();
+}
+
+console.log($divsEventos);
+
+$divsEventos.forEach(div => {
+  //Fase burbuja
+  div.addEventListener("click", flujoEventos);
+  //div.addEventListener("click", flujoEventos, false);
+  //Fase captura
+  //div.addEventListener("click", flujoEventos, true);
+  /* div.addEventListener("click", flujoEventos, {
+    capture: false,
+    once: true,
+  }); */  
+});
+
+$linkEventos.addEventListener("click", (e) => {
+  alert("Hola soy Helio Gonzales y estudio programacion");
+  e.preventDefault();
+  e.stopPropagation();
+})
