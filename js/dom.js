@@ -409,7 +409,7 @@ const removerDobleClick = (e) => {
 
 
 
-const $divsEventos = document.querySelectorAll(".eventos-flujos div"),
+/* const $divsEventos = document.querySelectorAll(".eventos-flujos div"),
  $linkEventos = document.querySelector(".eventos-flujos a");
 
 function flujoEventos(e) {
@@ -421,18 +421,39 @@ console.log($divsEventos);
 
 $divsEventos.forEach(div => {
   //Fase burbuja
-  div.addEventListener("click", flujoEventos);
+  div.addEventListener("click", flujoEventos); */
   //div.addEventListener("click", flujoEventos, false);
   //Fase captura
   //div.addEventListener("click", flujoEventos, true);
   /* div.addEventListener("click", flujoEventos, {
     capture: false,
     once: true,
-  }); */  
-});
+  });
+}); */  
 
-$linkEventos.addEventListener("click", (e) => {
+/* $linkEventos.addEventListener("click", (e) => {
   alert("Hola soy Helio Gonzales y estudio programacion");
   e.preventDefault();
   e.stopPropagation();
-})
+}); */
+
+
+
+
+
+function flujoEventos(e) {
+  console.log(`Hola te saluda ${this}, el click lo origino ${e.target.className}`);
+}
+
+document.addEventListener("click", (e) => {
+  console.log("Click en", e.target);
+
+  if(e.target.matches(".eventos-flujos div")) {
+    flujoEventos(e);
+  }
+
+  if (e.target.matches(".eventos-flujos a")) {
+    alert("Hola soy Helio Gonzales y estudio programacion");
+    e.preventDefault();
+  }
+});
