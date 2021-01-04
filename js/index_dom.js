@@ -10,7 +10,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
     alarm("assets/graciosos-alarma-es-tu-mujer-.mp3", "#activar-alarma", "#desactivar-alarma");
 });
 
-d.addEventListener("keypress", (e) => {
+d.addEventListener("keydown", (e) => {
     shortcuts(e);
     moveBall(e, ".ball", ".stage");
 });
