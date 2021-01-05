@@ -14,10 +14,10 @@ d.addEventListener("DOMContentLoaded", (e) => {
     alarm("assets/graciosos-alarma-es-tu-mujer-.mp3", "#activar-alarma", "#desactivar-alarma");
     countdown("countdown", "January 04, 2021 15:44:30", "Feliz Cumpleaños Helio 👽");
     scrollTopButton(".scroll-top-btn");
-    darkTheme(".dark-theme-btn", "dark-mode");
 });
 
 d.addEventListener("keydown", (e) => {
     shortcuts(e);
     moveBall(e, ".ball", ".stage");
 });
+darkTheme(".dark-theme-btn", "dark-mode");
