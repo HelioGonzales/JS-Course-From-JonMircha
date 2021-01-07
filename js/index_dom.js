@@ -4,6 +4,7 @@ import {moveBall, shortcuts} from "./dom/teclado.js";
 import countdown from "./dom/cuenta_regresiva.js";
 import scrollTopButton from "./dom/boton_scroll.js";
 import darkTheme from "./dom/tema_oscuro.js";
+import responsiveMedia from "./dom/objeto_responsive.js";
 
 
 const d = document;
@@ -14,6 +15,8 @@ d.addEventListener("DOMContentLoaded", (e) => {
     alarm("assets/graciosos-alarma-es-tu-mujer-.mp3", "#activar-alarma", "#desactivar-alarma");
     countdown("countdown", "January 04, 2021 15:44:30", "Feliz Cumpleaños Helio 👽");
     scrollTopButton(".scroll-top-btn");
+    responsiveMedia("youtube", "(min-width: 1024px)", `<a href="https://youtu.be/K9ySDiKgEG0" target="_blank" rel="noopener">Ver Video</a>`, `<iframe width="560" height="315" src="https://www.youtube.com/embed/K9ySDiKgEG0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`);
+    responsiveMedia("gmaps", "(min-width: 1024px)", `<a href="https://goo.gl/maps/jVGoDGyFkRHPU25JA" target="_blank" rel="noopener">Ver Mapa</a>`, `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3869.825190230636!2d-75.76529733575369!3d-14.087494437039238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9110e3010800b101%3A0x136be001d08a4223!2sHuacachina%2011000%2C%20Per%C3%BA!5e0!3m2!1ses!2shk!4v1610014361505!5m2!1ses!2shk" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>`);
 });
 
 d.addEventListener("keydown", (e) => {

@@ -70,11 +70,12 @@
      background-color: var(--second-modal-color);
      /* opacity: 0; */
      /* transition: transform .3s ease, ocpacity 0.5s ease; */
-     transition: transform .3s ease;
+     visibility: hidden;
+     transition: transform 0.3s ease;
      /* De arriba */
      transform: translate(0, -100%); 
      /* De abajo */
-     /* transform: translate(0, -100%); */
+     /* transform: translate(0, 100%); */
      /* De la derecha */
      /* transform: translate(100%, 0); */
      /* De la izquierda */
@@ -82,7 +83,8 @@
  }
 
  .panel.is-active {
-     transform:translate(0, 0);
+     transform: translate(0, 0);
+     visibility: visible;
      /* Opacidad */
      /* Opacity: 1; */
  }
