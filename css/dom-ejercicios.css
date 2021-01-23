@@ -321,6 +321,10 @@
     color: #4d4d4d;
 }
 
+.video-smart {
+    width: 60vw;
+}
+
 
 /* ***************** ScrollSpy*********************** */
 
@@ -377,5 +381,9 @@
     .scroll-top-btn {
         right: initial;
         left: calc(4.25rem + 1vw);
+    }
+
+    .video-smart {
+        width: 60vw;
     }
 }
