@@ -24,6 +24,12 @@
       "id": 5,
       "nombre": "Ikki",
       "constelacion": "Fenix"
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
     }
   ],
   "dioses": [
