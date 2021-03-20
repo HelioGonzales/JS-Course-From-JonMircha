@@ -26,10 +26,29 @@
       "constelacion": "Fenix"
     },
     {
+      "nombre": "Mascara de Muerte",
+      "constelacion": "Cancer",
+      "id": 7
+    },
+    {
+      "nombre": "Saga",
+      "constelacion": "Gemini",
       "id": 6
     },
     {
-      "id": 7
+      "nombre": "Aioria",
+      "constelacion": "Leo",
+      "id": 9
+    },
+    {
+      "nombre": "Shaka",
+      "constelacion": "Virgo",
+      "id": 10
+    },
+    {
+      "nombre": "Dohko ",
+      "constelacion": "Libra",
+      "id": 11
     }
   ],
   "dioses": [
