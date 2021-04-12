@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout with Stripe</title>
+  <style>
+    html {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 16px;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    .sales {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .sales>* {
+      flex: 1 1 200px;
+      margin: 1rem;
+    }
+
+    .sale {
+      background-color: gray;
+      color: white;
+      font-size: 125%;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+    }
+
+    .sale:hover {
+      opacity: .9;
+      transform: scale(.9);
+    }
+
+    .sale img {
+      /* max-width: 100%;
+      height: auto; */
+      width: 100%;
+      height: 70%;
+    }
+
+    .sale figcaption {
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Checkout with Stripe</h1>
+  <section id="sales" class="sales"></section>
+  <template id="sales-template">
+    <figure class="sale">
+      <img>
+      <figcaption></figcaption>
+    </figure>
+  </template>  
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="/ajax-ejercicios/assets/stripe-checkout.js" type="module"></script>
+</body>
+</html>
