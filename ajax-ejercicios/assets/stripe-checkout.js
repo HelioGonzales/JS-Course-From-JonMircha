@@ -1,7 +1,7 @@
 const d = document,
   $sales = d.getElementById("sales"),
   $template = d.getElementById("sales-template").content,
-  $fragment = d.createDocumentFragment(),
+  $fragment = d.createDocumentFragment();
   fetchOptions = {
     headers: {
       Authorization: `Bearer ${process.env.PUBLIC}`,
