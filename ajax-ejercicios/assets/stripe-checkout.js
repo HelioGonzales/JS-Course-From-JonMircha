@@ -1,10 +1,14 @@
+//require('dotenv').config();
+import STRIPE_KEYS from "./stripe-keys.js";
+
 const d = document,
   $sales = d.getElementById("sales"),
   $template = d.getElementById("sales-template").content,
-  $fragment = d.createDocumentFragment();
+  $fragment = d.createDocumentFragment(),
   fetchOptions = {
     headers: {
-      Authorization: `Bearer ${process.env.PUBLIC}`,
+      //Authorization: `Bearer ${process.env.PUBLIC}`,
+      Authorization: `Bearer ${STRIPE_KEYS.SECRET}`,
     },
   };
 
@@ -21,11 +25,11 @@ Promise.all([
     //console.log(json);
     products = json[0].data;
     prices = json[1].data;
-    console.log(products, prices);
+    //console.log(products, prices);
 
     prices.forEach((el) => {
       let productData = products.filter((product) => product.id === el.product);
-      console.log(productData);
+      //console.log(productData);
 
       $template.querySelector(".sale").setAttribute("data-price", el.id);
       $template.querySelector("img").src = productData[0].images[0];
@@ -53,7 +57,7 @@ d.addEventListener("click", (e) => {
     //alert("To Buy!!!")
     let price = e.target.parentElement.getAttribute("data-price");
     //console.log(price)
-    Stripe(process.env.PUBLIC)
+    Stripe(STRIPE_KEYS.PUBLIC)
       .redirectToCheckout({
         lineItems: [{price, quantity: 1}],
         mode: "payment",
