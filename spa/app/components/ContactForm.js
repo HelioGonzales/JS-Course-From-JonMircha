@@ -90,7 +90,7 @@ export function ContactForm() {
 }
   `;
 
-  $form.insertAdjacentHTML = `
+  $form.innerHTML = `
   <legend>Envianos tus comentarios</legend>
     <input type="text" name="name" placeholder="Escribe tu nombre" title="Nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\\s]+$" required>
     <input type="email" name="email" placeholder="Escribe tu email" title="email incorrecto" pattern="^[a-z0-9]+(\\.[_a-z0-9]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,15})$" required>
@@ -144,7 +144,7 @@ export function ContactForm() {
 
     d.addEventListener("submit", (e) => {
       e.preventDefault();
-      alert("Enviando Formulario");
+      //alert("Enviando Formulario");
 
       const $loader = d.querySelector(".contact-form-loader"),
         $response = d.querySelector(".contact-form-response");
@@ -157,7 +157,7 @@ export function ContactForm() {
       })
         .then((res) => (res.ok ? res.json() : Promise.reject(res)))
         .then((json) => {
-          console.log(json);
+          //console.log(json);
           $loader.classList.add("none");
           $response.classList.remove("none");
           $response.innerHTML = `<p>${json.message}</p>`;
