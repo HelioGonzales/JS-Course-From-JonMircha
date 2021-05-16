@@ -1,13 +1,22 @@
-import React, { Component } from "react";
+import React from "react";
 import logo from "./logo.svg";
 import Componente from "./components/Componente";
 import Propiedades from "./components/Propiedades";
+import Estado from "./components/Estado";
+import RendereizadoCondicional from "./components/RenderizadoCondicional";
+import RendereizadoElementos from "./components/RenderizadoElementos";
+import { EventosES6 } from "./components/Eventos";
+import { EventosES7 } from "./components/Eventos";
+import { MasSobreEventos } from "./components/Eventos";
+import ComunicacionComponentes from "./components/ComunicacionComponentes";
+import CicloVida from "./components/CicloVida";
+import AjaxApis from "./components/AjaxApis";
+import ContadorHooks from "./components/ContadorHooks";
+import ScrollHooks from "./components/ScrollHooks";
+
 import "./App.css";
 
 function App() {
-  let nombre = "Helio Gonzales Rivas";
-  let auth = true;
-  let estaciones = ["verano", "primavera", "otoño", "invierno"];
   return (
     <div className="App">
       <header className="App-header">
@@ -42,6 +51,27 @@ function App() {
               <Componente msg="Soy un componente pasado como Prop" />
             }
           />
+          <Estado />
+          <hr />
+          <RendereizadoCondicional />
+          <hr />
+          <RendereizadoElementos />
+          <hr />
+          <EventosES6 />
+          <hr />
+          <EventosES7 />
+          <hr />
+          <MasSobreEventos />
+          <hr />
+          <ComunicacionComponentes />
+          <hr />
+          <CicloVida />
+          <hr />
+          <AjaxApis />
+          <hr />
+          <ContadorHooks titulo="Seguidores" />
+          <hr />
+          <ScrollHooks></ScrollHooks>
         </section>
       </header>
     </div>
