@@ -1,4 +1,4 @@
-//require("dotenv").config();
+// require("dotenv").config();
 import STRIPE_KEYS from "./stripe-keys.js";
 
 const d = document,
@@ -7,7 +7,7 @@ const d = document,
   $fragment = d.createDocumentFragment(),
   fetchOptions = {
     headers: {
-      //Authorization: `Bearer ${process.env.SECRET}`,
+      // Authorization: `Bearer ${process.env.SECRET}`,
       Authorization: `Bearer ${STRIPE_KEYS.SECRET}`,
     },
   };
@@ -58,7 +58,7 @@ d.addEventListener("click", (e) => {
     let price = e.target.parentElement.getAttribute("data-price");
     //console.log(price)
     Stripe(STRIPE_KEYS.PUBLIC)
-      //Stripe(process.env.PUBLIC)
+      // Stripe(process.env.PUBLIC)
       .redirectToCheckout({
         lineItems: [{ price, quantity: 1 }],
         mode: "payment",
