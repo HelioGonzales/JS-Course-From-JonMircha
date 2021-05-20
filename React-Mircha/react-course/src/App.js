@@ -13,8 +13,14 @@ import CicloVida from "./components/CicloVida";
 import AjaxApis from "./components/AjaxApis";
 import ContadorHooks from "./components/ContadorHooks";
 import ScrollHooks from "./components/ScrollHooks";
-
+import RelojHooks from "./components/RelojHooks";
+import AjaxHooks from "./components/AjaxHooks";
+import HooksPersonalizados from "./components/HooksPersonalizados";
+import Referencias from "./components/Referencias";
+import Formularios from "./components/Formularios";
+import Estilos from "./components/Estilos";
 import "./App.css";
+import ComponentesEstilizados from "./components/ComponentesEstilizados";
 
 function App() {
   return (
@@ -72,6 +78,34 @@ function App() {
           <ContadorHooks titulo="Seguidores" />
           <hr />
           <ScrollHooks></ScrollHooks>
+          <hr />
+          <RelojHooks />
+          <hr />
+          <AjaxHooks />
+          <hr />
+          <HooksPersonalizados />
+          <hr />
+          <Referencias />
+          <hr />
+          <Formularios />
+          <hr />
+          <Estilos />
+          <hr />
+          <ComponentesEstilizados />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
         </section>
       </header>
     </div>

@@ -4,7 +4,7 @@ export default function ScrcollHooks() {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    console.log("Moviendo el scroll");
+    // console.log("Moviendo el scroll");
 
     const detectarScroll = () => setScrollY(window.pageYOffset);
 
@@ -12,20 +12,20 @@ export default function ScrcollHooks() {
 
     return () => {
       window.removeEventListener("scroll", detectarScroll);
-      console.log("Fase de Desmontaje");
+      // console.log("Fase de Desmontaje");
     };
   }, [scrollY]);
 
   useEffect(() => {
-    console.log("Fase de Montaje");
+    // console.log("Fase de Montaje");
   }, []);
 
   useEffect(() => {
-    console.log("Fase de actualizacion");
+    // console.log("Fase de actualizacion");
   });
 
   useEffect(() => {
-    console.log("Fase de Desmontaje");
+    // console.log("Fase de Desmontaje");
     return () => {};
   });
 
